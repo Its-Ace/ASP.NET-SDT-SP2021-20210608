@@ -1,0 +1,88 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+</div>
+
+<div class="container">
+	<div class="py-3 text-center">
+		<img style="width:500px; height:200px" src ="/images/cars.png"/ alt="Demo">
+		<h2>Car's List</h2>
+		<p class="lead">Application made with ASP.NET Core, Bootstrap and gRPC</p>
+	</div>
+	<button type="button" class="btn fas fa-plus" style="background-color: powderblue" data-toggle="modal" data-target="#productModal" onclick="clearStuff();">Add Car</button><br /><br />
+	<table class="table table-bordered table-striped table-hover">
+		<thead>
+			<tr>
+				<th>
+					Identification number
+				</th>
+				<th>
+					Name
+				</th>
+				<th>
+					Seats
+				</th>
+				<th>
+					Brand
+				</th>
+				<th>
+					Type
+				</th>
+				<th>
+					Value
+				</th>
+				<th>
+					Actions
+				</th>
+			</tr>
+		</thead>
+		<tbody class="tbody">
+		</tbody>
+	</table>
+</div>
+<div class="modal fade" id="productModal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title bi bi-plus">Add Product</h4>
+				<button type="button" class="close" data-dismiss="modal">×</button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="ItemId">ID</label>
+						<input type="text" class="form-control" id="ItemID" placeholder="Id" disabled="disabled" />
+					</div>
+					<div class="form-group">
+						<label for="Name">Name</label>
+						<input type="text" class="form-control" id="Name" placeholder="Name" />
+					</div>
+					<div class="form-group">
+						<label for="Amount">Seats</label>
+						<input type="number" class="form-control" id="Seats" placeholder="Seats" />
+					</div>
+					<div class="form-group">
+						<label for="Brand">Brand</label>
+						<input type="text" class="form-control" id="Brand" placeholder="Brand" />
+					</div>
+					<div class="form-group">
+						<label for="Type">Type</label>
+						<input type="text" class="form-control" id="Type" placeholder="Type" />
+					</div>
+					<div class="form-group">
+						<label for="Value">Value</label>
+						<input type="number" step="0.01" min="0" class="form-control" id="Value" placeholder="Value" />
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn redgate" id="btnAddProduct" onclick="return AddProduct();">Add</button>
+				<button type="button" class="btn redgate" id="btnUpdateProduct" style="display:none;" onclick="UpdateProduct();">Update</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIPushNotification", "APIPushNotification\APIPushNotification.csproj", "{5CC1BAA9-1FD6-463F-AA2C-4046C6989F25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CC1BAA9-1FD6-463F-AA2C-4046C6989F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC1BAA9-1FD6-463F-AA2C-4046C6989F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC1BAA9-1FD6-463F-AA2C-4046C6989F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC1BAA9-1FD6-463F-AA2C-4046C6989F25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61E08A49-622C-4D0E-BE9E-F51B1D6DBB20}
+	EndGlobalSection
+EndGlobal
