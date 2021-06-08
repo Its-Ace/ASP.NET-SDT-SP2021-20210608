@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      Required for the samples in this repo only.
+      Normally, you should replace this with a PackageReference to McMaster.NETCore.Plugins.
+    -->
+    <ProjectReference Include="$(RepoRoot)src\Plugins\McMaster.NETCore.Plugins.csproj" />
+    <ProjectReference Include="..\MyPlugin\MyPlugin.csproj" />
+    <ProjectReference Include="..\Plugin2\Plugin2.csproj" />
+    <ProjectReference Include="..\Plugin3\Plugin3.csproj" />
+  </ItemGroup>
+
+  <Target Name="BuildPlugin" BeforeTargets="Build">
+    <MSBuild Projects="..\MyPlugin\MyPlugin.csproj" Targets="Publish" Properties="Configuration=$(Configuration);PublishDir=$(OutputPath)/plugins/MyPlugin/" />
+    <MSBuild Projects="..\Plugin2\Plugin2.csproj" Targets="Publish" Properties="Configuration=$(Configuration);PublishDir=$(OutputPath)/plugins/Plugin2/" />
+    <MSBuild Projects="..\Plugin3\Plugin3.csproj" Targets="Publish" Properties="Configuration=$(Configuration);PublishDir=$(OutputPath)/plugins/Plugin3/" />
+        
+  </Target>
+
+</Project>
